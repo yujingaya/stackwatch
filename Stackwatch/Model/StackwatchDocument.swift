@@ -8,12 +8,13 @@ struct StackwatchDocument: Codable {
     init(title: String = "New Stack!") {
         self.title = title
         dones = []
-        todos = [.listUpTodos]
+        todos = []
     }
 }
 
 extension StackwatchDocument {
-    mutating func appendTodo(_ todo: Todo) {
+    mutating func appendTodo(_ name: String) {
+        let todo = Todo(id: nextID, name: name)
         todos.append(todo)
     }
 
@@ -28,22 +29,31 @@ extension StackwatchDocument {
     var totalDuration: TimeInterval {
         dones.map { $0.duration }.reduce(0, +)
     }
+
+    private var nextID: Int {
+        if let lastTodo = todos.last {
+            return lastTodo.id + 1
+        }
+        if let lastDone = dones.last {
+            return lastDone.id + 1
+        }
+        return 0
+    }
 }
 
-struct Done: Codable {
+struct Done: Codable, Identifiable {
+    let id: Int
     var name: String
     var duration: TimeInterval
 
     init(_ todo: Todo, duration: TimeInterval) {
+        self.id = todo.id
         self.name = todo.name
         self.duration = duration
     }
 }
 
-struct Todo: Codable {
+struct Todo: Codable, Identifiable {
+    let id: Int
     var name: String
-}
-
-extension Todo {
-    static var listUpTodos: Todo { Todo(name: "List up to-dos") }
 }

@@ -2,9 +2,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
-    }
+    static let stackDocument = UTType(exportedAs: "com.yujingaya.stackwatch.stack")
 }
 
 struct StackwatchDocument: FileDocument {
@@ -14,7 +12,7 @@ struct StackwatchDocument: FileDocument {
         self.text = text
     }
 
-    static var readableContentTypes: [UTType] { [.exampleText] }
+    static var readableContentTypes: [UTType] { [.stackDocument] }
 
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,

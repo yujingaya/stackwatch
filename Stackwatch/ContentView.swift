@@ -3,8 +3,29 @@ import SwiftUI
 struct ContentView: View {
     @Binding var document: StackwatchDocument
 
+    @StateObject var stopwatch = Stopwatch()
+
     var body: some View {
-        TextEditor(text: $document.title)
+        VStack {
+            HStack {
+                Button {
+                    _ = stopwatch.reset()
+                } label: {
+                    Image(systemName: "checkmark.diamond.fill")
+                }
+
+                Button {
+                    stopwatch.toggle()
+                } label: {
+                    Image(systemName: stopwatch.isRunning ? "pause.fill" : "play.fill")
+                }
+            }
+
+            Text(Duration(secondsOf: stopwatch.duration).formatted())
+                .monospacedDigit()
+
+            Spacer()
+        }
     }
 }
 

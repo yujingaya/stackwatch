@@ -16,6 +16,9 @@
 		CE8250A32928B5DF009E556F /* StackwatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250A22928B5DF009E556F /* StackwatchUITests.swift */; };
 		CE8250A52928B5DF009E556F /* StackwatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250A42928B5DF009E556F /* StackwatchUITestsLaunchTests.swift */; };
 		CE8250B32928BA10009E556F /* StackwatchDocument+FileDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250B22928BA10009E556F /* StackwatchDocument+FileDocument.swift */; };
+		CE8250BA2928D8C3009E556F /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250B92928D8C3009E556F /* Stopwatch.swift */; };
+		CE8250C2292916CC009E556F /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250C1292916CC009E556F /* DisplayLink.swift */; };
+		CE8250CF29294BAA009E556F /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250CE29294BAA009E556F /* Duration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		CE8250A22928B5DF009E556F /* StackwatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackwatchUITests.swift; sourceTree = "<group>"; };
 		CE8250A42928B5DF009E556F /* StackwatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackwatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE8250B22928BA10009E556F /* StackwatchDocument+FileDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackwatchDocument+FileDocument.swift"; sourceTree = "<group>"; };
+		CE8250B92928D8C3009E556F /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		CE8250C1292916CC009E556F /* DisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLink.swift; sourceTree = "<group>"; };
+		CE8250CE29294BAA009E556F /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +106,11 @@
 		CE8250822928B5DE009E556F /* Stackwatch */ = {
 			isa = PBXGroup;
 			children = (
-				CE8250B12928B9EE009E556F /* Model */,
 				CE8250832928B5DE009E556F /* StackwatchApp.swift */,
 				CE8250872928B5DE009E556F /* ContentView.swift */,
+				CE8250B12928B9EE009E556F /* Model */,
+				CE8250BB2928E535009E556F /* Utility */,
+				CE8250D029296854009E556F /* Extension */,
 				CE8250892928B5DF009E556F /* Assets.xcassets */,
 				CE82508B2928B5DF009E556F /* Info.plist */,
 				CE82508C2928B5DF009E556F /* Stackwatch.entitlements */,
@@ -143,6 +151,23 @@
 				CE8250B22928BA10009E556F /* StackwatchDocument+FileDocument.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE8250BB2928E535009E556F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CE8250C1292916CC009E556F /* DisplayLink.swift */,
+				CE8250B92928D8C3009E556F /* Stopwatch.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CE8250D029296854009E556F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE8250CE29294BAA009E556F /* Duration.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8250842928B5DE009E556F /* StackwatchApp.swift in Sources */,
+				CE8250C2292916CC009E556F /* DisplayLink.swift in Sources */,
+				CE8250BA2928D8C3009E556F /* Stopwatch.swift in Sources */,
 				CE8250862928B5DE009E556F /* StackwatchDocument.swift in Sources */,
 				CE8250B32928BA10009E556F /* StackwatchDocument+FileDocument.swift in Sources */,
 				CE8250882928B5DE009E556F /* ContentView.swift in Sources */,
+				CE8250CF29294BAA009E556F /* Duration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

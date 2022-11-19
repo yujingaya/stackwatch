@@ -1,5 +1,3 @@
-import Foundation
-
 struct StackwatchDocument: Codable {
     var title: String
     private(set) var dones: [Done]
@@ -18,7 +16,7 @@ extension StackwatchDocument {
         todos.append(todo)
     }
 
-    mutating func done(with duration: TimeInterval) {
+    mutating func done(with duration: Duration) {
         assert(!todos.isEmpty)
 
         let todo = todos.removeFirst()
@@ -26,8 +24,8 @@ extension StackwatchDocument {
         dones.append(done)
     }
 
-    var totalDuration: TimeInterval {
-        dones.map { $0.duration }.reduce(0, +)
+    var totalDuration: Duration {
+        dones.map { $0.duration }.reduce(.zero, +)
     }
 
     private var nextID: Int {
@@ -44,9 +42,9 @@ extension StackwatchDocument {
 struct Done: Codable, Identifiable {
     let id: Int
     var name: String
-    var duration: TimeInterval
+    var duration: Duration
 
-    init(_ todo: Todo, duration: TimeInterval) {
+    init(_ todo: Todo, duration: Duration) {
         self.id = todo.id
         self.name = todo.name
         self.duration = duration

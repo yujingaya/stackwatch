@@ -15,6 +15,7 @@
 		CE8250992928B5DF009E556F /* StackwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250982928B5DF009E556F /* StackwatchTests.swift */; };
 		CE8250A32928B5DF009E556F /* StackwatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250A22928B5DF009E556F /* StackwatchUITests.swift */; };
 		CE8250A52928B5DF009E556F /* StackwatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250A42928B5DF009E556F /* StackwatchUITestsLaunchTests.swift */; };
+		CE8250B32928BA10009E556F /* StackwatchDocument+FileDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8250B22928BA10009E556F /* StackwatchDocument+FileDocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		CE82509E2928B5DF009E556F /* StackwatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackwatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8250A22928B5DF009E556F /* StackwatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackwatchUITests.swift; sourceTree = "<group>"; };
 		CE8250A42928B5DF009E556F /* StackwatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackwatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE8250B22928BA10009E556F /* StackwatchDocument+FileDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackwatchDocument+FileDocument.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,8 @@
 		CE8250822928B5DE009E556F /* Stackwatch */ = {
 			isa = PBXGroup;
 			children = (
+				CE8250B12928B9EE009E556F /* Model */,
 				CE8250832928B5DE009E556F /* StackwatchApp.swift */,
-				CE8250852928B5DE009E556F /* StackwatchDocument.swift */,
 				CE8250872928B5DE009E556F /* ContentView.swift */,
 				CE8250892928B5DF009E556F /* Assets.xcassets */,
 				CE82508B2928B5DF009E556F /* Info.plist */,
@@ -132,6 +134,15 @@
 				CE8250A42928B5DF009E556F /* StackwatchUITestsLaunchTests.swift */,
 			);
 			path = StackwatchUITests;
+			sourceTree = "<group>";
+		};
+		CE8250B12928B9EE009E556F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE8250852928B5DE009E556F /* StackwatchDocument.swift */,
+				CE8250B22928BA10009E556F /* StackwatchDocument+FileDocument.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 			files = (
 				CE8250842928B5DE009E556F /* StackwatchApp.swift in Sources */,
 				CE8250862928B5DE009E556F /* StackwatchDocument.swift in Sources */,
+				CE8250B32928BA10009E556F /* StackwatchDocument+FileDocument.swift in Sources */,
 				CE8250882928B5DE009E556F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
